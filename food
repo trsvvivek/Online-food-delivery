@@ -1,0 +1,168 @@
+#include <stdio.h>
+// Function to display the menu
+void displayMenu() {
+    printf("Welcome to the Indian Food Online Ordering System!\n");
+    printf("Menu:\n");
+    printf("1. Butter Chicken - $120\n");
+    printf("2. Chicken Dum Biryani - $150\n");
+    printf("3. Tandoori Chicken Biryani - $160\n");
+    printf("4. Naan - $25\n");
+    printf("5. Paneer Butter Masala - $110\n");
+    printf("6. Kaju Curry - $125\n");
+    printf("7. Tomato Curry - $115\n");
+    printf("8. Palak Paneer - $105\n");
+    printf("9. Pulka - $20\n");
+    printf("10.Chicken65 Biryani -$135\n");
+    printf("11.Veg Biryani - $120\n");
+    printf("12.Paneer Biryani - $100\n");
+    printf("13.Tomato Rice - $100\n");
+    printf("14.Jeera Rice - $90\n");
+    printf("15.Chicken Fried Rice - $115\n");
+    printf("16.Veg Fried Rice - $111\n"); 
+    printf("17.Tomato Soup - $80\n");
+    printf("18.Chicken65 - $130\n");
+    printf("19.Paneer65 - $110\n");
+    printf("20.Kaju Biryani -$220\n");
+    printf("21.Mushroom Biryani -$165\n");
+    printf("22.Dragon Chicken -$172\n");
+    printf("23.Exit\n");
+}
+
+int main() {
+    int choice;
+    int quantity;
+    int total = 0;
+    char option;
+
+    do {
+        displayMenu();
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 120;
+                break;
+            case 2:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 150;
+                break;
+            case 3:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 160;
+                break;
+            case 4:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 25;
+                break;
+             case 5:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 110;
+                break;
+            case 6:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 125;
+                break;
+            case 7:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 115;
+                break;
+            case 8:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 105;
+                break; 
+            case 9:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 20;
+                break;
+            case 10:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 135;
+                break;
+            case 11:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 120;
+                break;
+            case 12:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 100;
+                break; 
+            case 13:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 100;
+                break;
+            case 14:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 90;
+                break;
+            case 15:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 115;
+                break;
+            case 16:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 111;
+                break; 
+            case 17:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 80;
+                break;
+            case 18:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 130;
+                break;
+            case 19:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 110;
+                break;
+            case 20:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 220;
+                break;
+            case 21:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 165;
+                break;
+            case 22:
+                printf("Enter quantity: ");
+                scanf("%d", &quantity);
+                total += quantity * 172;
+                break;
+            case 23:
+                printf("Thank you for ordering. Your total is: $%d\n", total);
+                return 0;
+            default:
+                printf("Invalid choice. Please try again.\n");
+                break;
+        }
+
+        printf("Do you want to order anything else? (y/n): ");
+        scanf(" %c", &option);
+    } while (option == 'y' || option == 'Y');
+
+    printf("Thank you for ordering. Your total is: $%d\n", total);
+
+    return 0;
+}
